@@ -1,5 +1,5 @@
 FROM "node"
-WORKDIR /opt/blog
+WORKDIR /opt/post
 COPY . ./
 EXPOSE "3000"
 CMD ["sleep", "infinity"]
