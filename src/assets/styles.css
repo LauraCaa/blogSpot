@@ -46,21 +46,24 @@ table {
 
 html body{
     background-image: url("/background.png");
-    background-size: cover;    height: 100%;
+    background-size: cover;    
+    height: 100%;
     font-family: sans-serif;
 }
 main{
     align-items: center;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
+    position: relative;
 }
 .posts-container{
     background-color: rgba(187, 187, 187, 0.686);
     border-radius: 20px;
     color: white;
+    margin: 20px;
     padding: 20px;
-    max-width: 50%;
+    max-width: 60%;
 }
 .posts-header{
     margin: 10px 5px;
@@ -81,15 +84,21 @@ main{
 .post{
     background-color: #9a808b;
     border-radius: 30px;
-    height: 260px;
+    height: 270px;
     overflow: hidden;
-    padding: 20px;
-    width: 260px;
+    padding: 30px;
+    width: 250px;
     text-align: center;
+}
+.post:hover{
+    background-color: #8b747e;
+    cursor: pointer;
 }
 .post img{
     border-radius: 20px;
     margin-bottom: 20px;
+    height: 150px;
+    width: 200px;
 }
 .post h4{
     font-size: 18px;
@@ -108,48 +117,62 @@ main{
     width: 100%;
 }
 .post span{
-    color: gray;
+    color: rgb(204, 204, 204);
     display: block;
     text-align: right;
     font-size: 12px;
 }
 
-
 .modal-wrapper{
-    background-color: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    min-height: 100%;
+    overflow: auto;
     position: absolute;
     width: 100%;
-    height: 100%;
 }
+.modal-wrapper.display-flex{
+    display: flex;
+}
+
 .modal{
     background-color: white;
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 50px;
     max-width: 700px;
     text-align: center;
+    padding: 20px 0;
     width: 80%;
 }
 .modal-header{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    position: relative;
+    align-items: center;
+    margin: 0 20px 30px 10px;
 }
-.modal-header span{
-    cursor: pointer;
+.modal-header .modal-action{
     text-align: right;
 }
-.modal h2{
+.modal-header .modal-action span{
+    cursor: pointer;
+}
+.modal-header img{
+    border-radius: 30px;
+    max-width: 100%;
+}
+.modal-body{
+    margin: 10px;
+    max-height: 300px;
+    overflow: auto;
+}
+.modal-body h2{
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
     text-transform: capitalize;
 }
-.modal p{
+.modal-body p{
     font-size: 16px;
-    margin-bottom: 20px;
+    margin: 20px;
     text-align: justify;
 }
 .modal-body span{
@@ -157,4 +180,5 @@ main{
     display: block;
     font-size: 12px;
     text-align: right;
+    margin-right: 30px;
 }
