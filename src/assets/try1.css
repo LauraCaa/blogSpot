@@ -1,0 +1,170 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Cuztomize code*/
+html body{
+    background-image: url("/sport.png");
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100%;
+}
+main{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+.posts-container{
+    background-color: rgba(182, 222, 234, 0.843);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 30px 20px;
+    max-width: 60%;
+}
+.posts-header{
+    margin-bottom: 20px;
+}
+.posts-header h1{
+    color: #073C67;
+    font-size: 24px;
+    font-weight: bold;
+}
+/* post component */
+.posts-body{
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: 500px;
+    justify-content: center;
+    padding: 20px 0;
+    overflow: scroll;
+}
+.posts-body .post{
+    background-color: #073c67af;
+    border-radius: 30px;
+    padding: 30px 20px;
+    text-align: center;
+    width: 250px;
+}
+.posts-body .post:hover{
+    background-color: #07355be0;
+    box-shadow: 1px 1px 3px #062741;
+    cursor: pointer;
+}
+.post img{
+    border-radius: 30px;
+    height: 150px;
+    width: 180px;
+}
+.post h2{
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.post p{
+    display: -webkit-box;
+    font-size: 14px;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.post span{
+    color: rgb(174, 202, 233);
+    display: block;
+    font-size: 12px;
+    margin: 10px;
+    text-align: right;
+}
+/* Modal component */
+.modal-wrapper{
+    align-items: center;
+    background-color: #01142394;
+    display: none;
+    justify-content: center;
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.display-flex{
+    display: flex;
+}
+.modal{
+    background-color: rgb(235, 244, 248);
+    border-radius: 30px;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+    width: 80%;
+}
+.modal span{
+    cursor: pointer;
+    display: block;
+    text-align: right;
+}
+.modal img{
+    border-radius: 30px;
+}
+.modal h2{
+    color: #073C67;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+    text-transform: capitalize;
+}
+.modal .modal-body{
+    height: 200px;
+    overflow: auto;
+}
+.modal-body p{
+    font-size: 15px;
+    text-align: justify;
+}
+.modal-body span{
+    color: rgb(174, 202, 233);
+    font-size: 12px;
+    margin-top: 20px;
+}
